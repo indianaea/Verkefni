@@ -30,7 +30,7 @@ void main() {
 
   for(int i=0; 0<num || num!=0; i++){
     digit += 1;
-    num = num ~/10;
+    num = num~/10;
   }
   print("Number of digits in given integer is: $digit");
 }
