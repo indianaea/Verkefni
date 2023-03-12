@@ -2,7 +2,8 @@ import 'dart:io';
 import 'dart:convert';
 import 'dart:math';
 
-/* Dæmi 4.
+/*
+Dæmi 4.
 Write a program that accepts a number from the user and counts the number of digits in the given integer using loop.
  */
 
@@ -15,12 +16,12 @@ void main() {
     digit += 1;
     num = num~/10;
   }
-  print("Number of digits in given integar is: $digit");
+  print("Number of digits in given integer is: $digit");
 }
 
 
 /*
-// Dæmi 4 - Önnur útgáfa - for lykkja notuð
+Dæmi 4 - Önnur útgáfa - for lykkja notuð
 
 void main() {
   print("Please write a number: ");
@@ -31,6 +32,6 @@ void main() {
     digit += 1;
     num = num ~/10;
   }
-  print("Number of digits in given integar is: $digit");
+  print("Number of digits in given integer is: $digit");
 }
 */
