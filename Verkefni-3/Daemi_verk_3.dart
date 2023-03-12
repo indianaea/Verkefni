@@ -3,7 +3,8 @@ import 'dart:convert';
 import 'dart:math';
 import 'dart:collection';
 
-/* Instructions:
+/*
+Instructions:
 1. Create an empty list to store the grocery items.
 2. Create a method called "addItemToList" that takes an item as input and adds it to the list.
 3. Create a menu system that allows the user to choose between adding an item to the list, viewing the list, or ending the program.

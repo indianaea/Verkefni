@@ -11,12 +11,12 @@ Program ends by printing out the sum and average of the numbers.
 void main() {
   print("Please choose any five numbers: ");
   int sum = 0;
-  int average = 0;
+  double average = 0;
 
   for (int i = 1; i <=5; i++){
     int input = int.parse(stdin.readLineSync());
     sum += input;
-    average = sum ~/ i;
+    average = sum/5;
   }
   print("The sum of the numbers is: $sum and the average is: $average");
 }
