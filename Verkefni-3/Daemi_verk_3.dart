@@ -19,6 +19,54 @@ void main() {
   print("Welcome to the grocery system.");
   print("User can add an item to the grocery list, view the list or exit the system.");
 
+  bool menu = true;
+  while (menu) {
+    print("Please choose what you would like to do: Add item, View list, Exit: ");
+    String choose = stdin.readLineSync(encoding: Encoding.getByName("UTF-8"));
+
+    switch (choose) {
+      case "Add item":
+        AddItemToList(groceryList);
+        break;
+      case "View list":
+        ViewList(groceryList);
+        break;
+      case "Exit":
+        print("Exiting grocery system, thank you.");
+        return;  //Til að stoppa alla keyrslu
+    }
+  }
+}
+
+void AddItemToList(groceryList) {
+  print("What item would you like to add to the grocery list: ");
+  String item = stdin.readLineSync(encoding: Encoding.getByName("UTF-8"));
+  groceryList.add(item);
+  print("$item has been added to the list.");
+}
+
+void ViewList(groceryList) {
+  if (groceryList.isEmpty) {
+    print("The grocery list is empty.");
+  }
+  else {
+    print("Following grocery list is currently: ");
+    for (String item in groceryList) {
+      print(item);
+    }
+  }
+}
+
+
+/*
+Aðeins önnur útgáfa þar sem AddItemToList er fyrir innan main() og ViewList tilheyrir switch þegar notandinn er að velja.
+Myndi þetta teljast sem "rétt" lausn þegar við erum að nota Methods?
+
+void main() {
+  List<String> groceryList = <String>[];
+  print("Welcome to the grocery system.");
+  print("User can add an item to the grocery list, view the list or exit the system.");
+
   void AddItemToList(String item) {
     groceryList.add(item);
   }
@@ -36,9 +84,14 @@ void main() {
         print("$item has been added to the list.");
         break;
       case "View list":
-        print("Following grocery list is currently: ");
-        for (String item in groceryList) {
-          print(item);
+        if (groceryList.isEmpty){
+          print("The grocery list is empty.");
+        }
+        else {
+          print("Following grocery list is currently: ");
+          for (String item in groceryList) {
+            print(item);
+          }
         }
         break;
       case "Exit":
@@ -47,3 +100,4 @@ void main() {
     }
   }
 }
+ */
